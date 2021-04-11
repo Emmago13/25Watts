@@ -68,13 +68,23 @@ a{
     font-size: 14px;
     letter-spacing: 0.22px;
     outline: none;
+    border-style: solid;
 }
 .section1__div{
     background-color: #ffffff;
     height: 672px;
     padding-top: 1px;
 }
-.section1__div2{}
+.section1__div2{
+    background-color: #E0752F;
+    width: 32px;
+    height: 384px;
+    margin-top: 144px;
+}
+.section1__div3{
+    position: absolute;
+    margin-top: -144px;
+}
 .section1__h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -91,16 +101,65 @@ a{
     margin-top: 44px;
     margin-left: 299px;
     margin-right: 299px;
-    font-family: 'Roboto Medium', arial;
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     letter-spacing: 0.22px;
     line-height: 28px;
     color: #343434;
 }
-.section1__p--display{}
-.section2__div{
+.section2__div--fondo1{
     background-color: #F2F4F1;
-    height: 672px;
+    height: 768px;
 }
-.section2__h2{}
-.section2__h3{}
+.section2__div--fondo2{
+    background-color: #DCE1DA;
+    width: 398px;
+    height: 768px;
+    float: right;
+}
+.section2__div--fondo3{
+    background-image: url(../Img/section3-image.png);
+    width: 966px;
+    height: 552px;
+    float: right;
+    margin-right: 200px;
+    margin-top: 112px;
+}
+.section2__div--fondo4{
+    background-color: #E0752F;
+    width: 471px;
+    height: 304px;
+    margin-left: 495px;
+    margin-top: 248px;
+}
+.section2__h3{
+    font-family: 'Roboto Medium', arial;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    line-height: 21px;
+    padding-top: 68px;
+    margin: 0px 0px 0px 50px;
+}
+.section2__h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 39px;
+    letter-spacing: 0.55px;
+    line-height: 59px;
+    margin: 0px 0px 0px 50px;
+}
+.section2__p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+    line-height: 21px;
+    color: #ffffff;
+    margin: 19.5px 49px 0px 50px;
+}
+.section2__div--img{
+    margin: 32.5px 49.3px 31px 371.3px;
+}
+.section3{}
