@@ -1,0 +1,22 @@
+footer{
+    div{
+        background-color: $color-quinary;
+        height: 96px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        p{
+            margin-left: 101px;
+            margin-top: 38px;
+            color: $color-terciary;
+            font-family: $font-terciary;
+            font-size: 15px;
+            letter-spacing: 0.22px;
+            padding: 0px;
+        }
+        img{
+            margin-right: 101px;
+            width: 86px;
+        }
+    }
+}
