@@ -1,0 +1,42 @@
+.section3__services{
+    @extend .section;
+    background-image: url(../Img/section4-image.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    
+    .section3__div--box{
+        margin-left: 10rem;
+        width: 66.9rem;
+        @include breakpoint("tablet"){
+            margin: 5rem;
+        }
+    }
+    .accordion {
+        background-color: $color-primary;
+        .accordion-header {
+            .accordion-button {
+                background-color: #f8f8f8;
+                font-family: $font-secondary;
+                font-weight: $font-medium;
+                position: relative;
+                padding: 20px;
+                color: #5F6368;
+                font-size: 1.6rem;
+                width: 100%;
+                text-align: left;
+                &::after {
+                    background-image: url(../../assets/Img/Iconfeather-chevron-down.svg);
+                }
+            }
+        }
+        .accordion-body {
+            font-family: $font-secondary;
+            font-weight: $font-regular;
+            color: #5F6368;
+            padding: 40px;
+            font-size: 1.6rem;
+        }
+    }
+}
