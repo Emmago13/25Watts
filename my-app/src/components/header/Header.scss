@@ -1,0 +1,35 @@
+header{
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid $color-secondary;
+    > div{
+        display: flex;
+        align-items: center;
+        margin-left: 10.1rem;
+        @include breakpoint("tablet"){
+            margin-left: 5rem;
+        }
+        > nav{
+            display: flex;
+            justify-content: flex-end;
+            flex: 1 1 auto;
+            > ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 3.8rem 5.3rem 3.7rem 0rem;
+                > li{
+                    list-style: none;
+                    > a{
+                        color: $color-primary;
+                        list-style: none;
+                        padding: 38px 25px;
+                        font-family: $font-secondary;
+                        font-weight: $font-regular;
+                        font-size: 1.6rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
