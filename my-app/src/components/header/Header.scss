@@ -1,7 +1,21 @@
-header{
+.header{
     position: absolute;
     width: 100%;
     border-bottom: 1px solid $color-secondary;
+    &.header--scroll{
+        position: fixed;
+        top: 0;
+        background-color: $color-secondary;
+        z-index: 1000;
+        transition: all 0.5s ease 0s;
+        ul{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        a:hover{
+            color: $color-quinary;
+        }
+    }
     > div{
         display: flex;
         align-items: center;
@@ -22,11 +36,14 @@ header{
                     > a{
                         color: $color-primary;
                         list-style: none;
-                        padding: 38px 25px;
+                        padding: 0 25px;
                         font-family: $font-secondary;
                         font-weight: $font-regular;
                         font-size: 1.6rem;
                         text-decoration: none;
+                    }
+                    a:hover{
+                        color: $color-secondary;
                     }
                 }
             }

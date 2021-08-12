@@ -4,9 +4,9 @@ import TopLogo from "../../assets/img/top-logo.svg"
 
 const Header = () => {
     return(
-        <header id="home">
+        <header className="header">
             <div>
-                <a href="#inicio">
+                <a href="#home">
                     <img src={TopLogo} alt="Logo25Watts"/>
                 </a>
                 <nav>
