@@ -1,7 +1,21 @@
-header{
+.header{
     position: absolute;
     width: 100%;
     border-bottom: 1px solid $color-secondary;
+    transition: all 0.5s ease 0s;
+    &.header--fixed {
+        top: 0;
+        position: fixed;
+        background-color: $color-secondary;
+        z-index: 1000;
+        .navbar > ul > li > a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        a:hover{
+            color: $color-quinary;
+        }
+    }
     > div{
         display: flex;
         align-items: center;

@@ -4,6 +4,7 @@ html {
   font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -36,13 +37,31 @@ img {
   height: 100vh;
 }
 
-header {
+.header {
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #E0752F;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
-header > div {
+.header.header--fixed {
+  top: 0;
+  position: fixed;
+  background-color: #E0752F;
+  z-index: 1000;
+}
+
+.header.header--fixed .navbar > ul > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header.header--fixed a:hover {
+  color: #343434;
+}
+
+.header > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,12 +72,12 @@ header > div {
 }
 
 @media only screen and (max-width: 768px) {
-  header > div {
+  .header > div {
     margin-left: 5rem;
   }
 }
 
-header > div > nav {
+.header > div > nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +89,7 @@ header > div > nav {
           flex: 1 1 auto;
 }
 
-header > div > nav > ul {
+.header > div > nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,11 +98,11 @@ header > div > nav > ul {
   margin: 3.8rem 5.3rem 3.7rem 0rem;
 }
 
-header > div > nav > ul > li {
+.header > div > nav > ul > li {
   list-style: none;
 }
 
-header > div > nav > ul > li > a {
+.header > div > nav > ul > li > a {
   color: #ffffff;
   list-style: none;
   padding: 38px 25px;
