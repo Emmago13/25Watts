@@ -15,31 +15,6 @@
     outline: none;
     cursor: pointer;
 }
-@mixin button2 {
-    background-color: #F8F8F8;
-    font-family: $font-terciary;
-    font-weight: $font-medium;
-    width: 100%;
-    height: 6.4rem;
-    border-radius: 4px 4px 0 0;
-    border: 1px solid #e3e3e3;
-    font-size: 16px;
-    letter-spacing: 0.22px;
-    line-height: 2rem;
-    outline: none;
-    cursor: pointer;
-}
-@mixin accordion {
-    background-color: $color-primary;
-    font-family: $font-terciary;
-    font-weight: $font-regular;
-    font-size: 1.6rem;
-    letter-spacing: 0.22px;
-    line-height: 2.4rem;
-    width: 100%;
-    height: 18.4rem;
-    margin: 0;
-}
 
 @mixin breakpoint($breakpoint) {
     @if $breakpoint == "mobile" {

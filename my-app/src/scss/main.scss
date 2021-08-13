@@ -6,9 +6,10 @@
 @import './mixins';
 
 @import './default';
+
 //components
 @import '../components/header/Header.scss';
-@import '../components/home/Home.scss';
+@import '../components/hero/Hero.scss';
 @import '../components/about/About.scss';
 @import '../components/products/Products.scss';
 @import '../components/services/Services.scss';

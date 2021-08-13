@@ -1,0 +1,77 @@
+.section_inicio{
+    .carousel{
+        img{
+            @extend .section;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+        .carousel-indicators {
+            position: absolute;
+            margin-left: 10.1rem;
+            right: auto;
+            bottom: 2rem;
+            @include breakpoint("tablet"){
+                margin-left: 5rem;
+            }
+            button{
+                margin: 5px 5px;
+                width: 1.2rem;
+                height: 1.2rem;
+                color: transparent;
+                background-color: $color-primary;
+                opacity: 0.4;
+                border-radius: 5rem;
+                border-top: none;
+                border-bottom: none;
+                &.active{
+                    background-color: $color-secondary;
+                    opacity: 1;
+                }
+            }
+        }
+        .carousel-caption{
+            left: 0;
+            top: 33%;
+            text-align: left;
+            @include margin;
+            @include breakpoint("tablet"){
+                margin-left: 5rem;
+                top: 25%;
+            }
+            h1{
+                margin: 0;
+                font-family: $font-primary;
+                font-weight: $font-medium;
+                font-size: 4.8rem;
+                color: $color-primary;
+                line-height: 4.8rem;
+                margin-bottom: 3rem;
+                @include breakpoint("mobile"){
+                    font-size: 3.5rem;
+                }
+            }
+            p{
+                font-family: $font-secondary;
+                color: $color-primary;
+                font-weight: $font-regular;
+                font-size: 1.6rem;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                @include breakpoint("mobile"){
+                    font-size: 1.4rem;
+                }
+            }
+            .btn{
+                padding-top: 11px;
+                margin-top: 2rem;
+                @include button;
+                @include breakpoint("mobile"){
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+    

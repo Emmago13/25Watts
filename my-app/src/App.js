@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from "./components/header/Header.js";
-import Home from './components/home/Home.js';
+import Hero from './components/hero/Hero.js';
 import About from './components/about/About.js';
 import Products from './components/products/Products.js';
 import Services from './components/services/Services.js';
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Home />
+      <Hero />
       <About />
       <Products />
       <Services />

@@ -2,11 +2,11 @@
     position: absolute;
     width: 100%;
     border-bottom: 1px solid $color-secondary;
+    z-index: 1000;
     &.header--scroll{
         position: fixed;
         top: 0;
         background-color: $color-secondary;
-        z-index: 1000;
         transition: all 0.5s ease 0s;
         ul{
             margin-top: 2rem;
