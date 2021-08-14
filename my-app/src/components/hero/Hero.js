@@ -1,12 +1,12 @@
 import React from 'react';
 import {Carousel, Button} from 'react-bootstrap'
-import BackImg from '../../assets/img/slider-1@2x.png'
+import BackImg from '../../assets/img/slider-1.png'
 
 
 const Hero = () =>{
     return(
-        <section id="home" className="section_inicio">
-            <Carousel controls={false} className="carousel">
+        <section id="home" className="section_home">
+            <Carousel controls={false}>
                 <Carousel.Item>
                   <img
                     src={BackImg}
