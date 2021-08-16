@@ -1,10 +1,23 @@
-import React from "react";
+import React,{useState} from "react";
 import TopLogo from "../../assets/img/top-logo.svg"
 
 
 const Header = () => {
+
+    const [navBar,setnavBar] = useState(false)
+
+    const scrollNav = () =>{
+        if (window.scrollY >= 100) {
+            setnavBar(true)
+        }else{
+            setnavBar(false)
+        }
+    }
+
+    window.addEventListener('scroll',scrollNav);
+
     return(
-        <header className="header">
+        <header id="header" className={navBar ? 'header onScroll' : 'header'}>
             <div>
                 <a href="#home">
                     <img src={TopLogo} alt="Logo25Watts"/>
