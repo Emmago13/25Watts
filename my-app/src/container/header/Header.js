@@ -15,6 +15,7 @@ const Header = () => {
     }
 
     window.addEventListener('scroll',scrollNav);
+    
 
     return(
         <header id="header" className={navBar ? 'header onScroll' : 'header'}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ProductsImg from '../../assets/img/section3-image.png';
+import ProductsImg from '../../assets/img/section3-image@2x.png';
 
 const Products = () =>{
     return(
