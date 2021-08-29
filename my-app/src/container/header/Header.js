@@ -7,13 +7,14 @@ const Header = () => {
     const [navBar,setnavBar] = useState(false)
 
     const scrollNav = () =>{
-        if (window.scrollY >= 100) {
-            setnavBar(true)
+        if (window.scrollY >= 100 && window.innerWidth >= 576) {
+            setnavBar(true);
         }else{
-            setnavBar(false)
+            setnavBar(false);
         }
     }
 
+    window.addEventListener('resize',scrollNav);
     window.addEventListener('scroll',scrollNav);
     
 
