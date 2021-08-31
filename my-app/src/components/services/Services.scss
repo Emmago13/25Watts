@@ -29,6 +29,9 @@
                 &::after {
                     background-image: url(../../assets/img/Iconfeather-chevron-down.svg);
                 }
+                &:focus{
+                    box-shadow: none;
+                }
             }
         }
         .accordion-body {

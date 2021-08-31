@@ -13,10 +13,10 @@
         display: flex;
         flex-direction: column;
     }
-    .section4__div2{
+    .section4__div--form{
         margin: 0;
     }
-    .section4__form{
+    form{
         margin: 0;
         width: 47.1rem;
         display: flex;
@@ -24,8 +24,46 @@
         @include breakpoint("tablet"){
             width: 100%;
         }
+        > .alert{
+            font-family: $font-secondary;
+            font-size: 1.3rem;
+            font-weight: $font-light;
+            width: max-content;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        > .alert-success{
+            border-color: #d1e7dd;
+            &:before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 10px solid #d1e7dd;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #d1e7dd;
+                border-bottom: 10px solid transparent;
+                left: 40px;
+                top: 40px;
+            }
+        }
+        > .alert-danger{
+            border-color: #f8d7da;
+            &:before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 10px solid #f8d7da;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #f8d7da;
+                border-bottom: 10px solid transparent;
+                left: 40px;
+                top: 40px;
+            }
+        }
     }
-    .section4__h3{
+    h3{
         margin: 0;
         font-family: $font-primary;
         font-weight: $font-semibold;
@@ -40,7 +78,7 @@
         display: flex;
         justify-content: center;
         font-family: $font-secondary;
-        font-weight: $font-medium;
+        font-weight: $font-light;
         font-size: 1.6rem;
         width: 100%;
         border: none;
@@ -59,10 +97,10 @@
         background: none;
         outline: none;
     }
-    .section4__btn{
+    button{
         @include button;
     }
-    .section4__img{
+    > img{
         max-width: 59rem;
         width: 45%;
         @include breakpoint("desktop"){
