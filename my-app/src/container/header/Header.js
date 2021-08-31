@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import TopLogo from "../../assets/img/top-logo.svg"
+import TopLogo from "../../assets/img/top-logo.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const Header = () => {
@@ -13,24 +14,71 @@ const Header = () => {
             setnavBar(false);
         }
     }
-
     window.addEventListener('resize',scrollNav);
     window.addEventListener('scroll',scrollNav);
-    
+
+    const scrollUp = () => {
+        scroll.scrollToTop();
+    };
 
     return(
         <header id="header" className={navBar ? 'header onScroll' : 'header'}>
             <div>
                 <a href="#home">
-                    <img src={TopLogo} alt="Logo25Watts"/>
+                    <img src={TopLogo} alt="Logo25Watts" onClick={scrollUp} />
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><Link
+                            activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}>
+                            Home
+                            </Link>
+                        </li>
+                        <li><Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}>
+                            About
+                            </Link>
+                        </li>
+                        <li><Link
+                            activeClass="active"
+                            to="products"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}>
+                            Products
+                            </Link>
+                        </li>
+                        <li><Link
+                            activeClass="active"
+                            to="services"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}>
+                            Services
+                            </Link>
+                        </li>
+                        <li><Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}>
+                            Contact
+                            </Link>
+                        </li>
                     </ul>
                 </nav>      
             </div>

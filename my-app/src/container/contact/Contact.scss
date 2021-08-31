@@ -31,10 +31,11 @@
             width: max-content;
             text-align: center;
             margin-bottom: 2rem;
+            border-radius: .75rem;
         }
         > .alert-success{
             border-color: #d1e7dd;
-            &:before {
+            &::after {
                 content: "";
                 width: 0px;
                 height: 0px;
@@ -49,7 +50,7 @@
         }
         > .alert-danger{
             border-color: #f8d7da;
-            &:before {
+            &::after {
                 content: "";
                 width: 0px;
                 height: 0px;

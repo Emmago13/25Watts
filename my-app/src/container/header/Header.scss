@@ -13,7 +13,7 @@
             margin-bottom: 2rem;
         }
         a:hover{
-            color: $color-quinary;
+            color: $color-quinary !important;
         }
     }
     > div{
@@ -34,7 +34,7 @@
                 > li{
                     list-style: none;
                     > a{
-                        color: $color-primary;
+                        color: $color-primary !important;
                         list-style: none;
                         padding: 0 25px;
                         font-family: $font-secondary;
@@ -43,7 +43,7 @@
                         text-decoration: none;
                     }
                     a:hover{
-                        color: $color-secondary;
+                        color: $color-secondary !important;
                     }
                 }
             }
