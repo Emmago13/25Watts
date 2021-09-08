@@ -6,7 +6,6 @@ import Alert from 'react-bootstrap/Alert';
 
 const Contact = () =>{
 
-    const [validated, setValidated] = useState(false);
     const [dataForm, setDataForm] = useState({});
     const [showAlert,setShowAlert] = useState(false);
     const [error,setError] = useState(false);
@@ -25,7 +24,6 @@ const Contact = () =>{
         e.preventDefault();
         const form = e.currentTarget;
         console.log("form.checkValidity()",form.checkValidity());
-        setValidated(true)
 
         if (form.checkValidity() === false) {
             setError(true);
@@ -37,7 +35,6 @@ const Contact = () =>{
                 setError(false)
                 setTimeout(()=>{setShowAlert(false)},3000);
                 form.reset();
-                setValidated(false);
             }
         }
     }
@@ -48,7 +45,7 @@ const Contact = () =>{
             <div className="section4__div">
                 <h3>Get in touch<span>We are hiring!</span></h3>
                 <div className="section4__div--form">
-                    <form noValidate validated={validated} onSubmit={(e)=>handleSubmit(e)} method="POST">
+                    <form noValidate onSubmit={(e)=>handleSubmit(e)} method="POST">
                         <label>
                             <input 
                             onChange={(e)=>handleChange(e)} 
