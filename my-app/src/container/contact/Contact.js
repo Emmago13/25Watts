@@ -9,6 +9,8 @@ const Contact = () =>{
     const [dataForm, setDataForm] = useState({});
     const [showAlert,setShowAlert] = useState(false);
     const [error,setError] = useState(false);
+    const [validated,setValidated] = useState(true)
+    const [checkVal,setCheckVal] = useState(false)
 
 
     const handleChange = (e) =>{
@@ -18,22 +20,27 @@ const Contact = () =>{
                 [e.target.name] : e.target.value,
             }
         })
-    }
+        setValidated(true);
+    };
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
         const form = e.currentTarget;
         console.log("form.checkValidity()",form.checkValidity());
-
+        
         if (form.checkValidity() === false) {
             setError(true);
             setShowAlert(true);
+            setValidated(false)
         }else{
             const response = await sendForm(dataForm);
             if (response.status === 201) {
+                setValidated(true)
+                setCheckVal(true)
                 setShowAlert(true);
-                setError(false)
+                setError(false);
                 setTimeout(()=>{setShowAlert(false)},3000);
+                setTimeout(()=>{setCheckVal(false)},3000)
                 form.reset();
             }
         }
@@ -52,22 +59,29 @@ const Contact = () =>{
                             required 
                             type="text" 
                             name="name" 
-                            placeholder="Name" />
-                        </label>
-                        <label>
-                            <input 
-                            onChange={(e)=>handleChange(e)} 
-                            required type="email" 
-                            name="email" 
-                            placeholder="Email" />
+                            placeholder="Name *"
+                            className={validated ? checkVal ? 'was-valid' : 'default' : null && validated ? 'default' : 'was-invalid'} />
+                            <span className={validated ? 'd-none' : 'invalid'}>This field is required</span>
                         </label>
                         <label>
                             <input 
                             onChange={(e)=>handleChange(e)} 
                             required 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email *" 
+                            className={validated ? checkVal ? 'was-valid' : 'default' : null && validated ? 'default' : 'was-invalid'} />
+                            <span className={validated ? 'd-none' : 'invalid'}>This field is required</span>
+                        </label>
+                        <label>
+                            <input 
+                            onChange={(e)=>handleChange(e)} 
+                            required
                             type="text" 
                             name="phone" 
-                            placeholder="Phone" />
+                            placeholder="Phone *"
+                            className={validated ? checkVal ? 'was-valid' : 'default' : null && validated ? 'default' : 'was-invalid'} />
+                            <span className={validated ? 'd-none' : 'invalid'}>This field is required</span>
                         </label>
                         <label>
                             <textarea 
@@ -75,13 +89,15 @@ const Contact = () =>{
                             required 
                             name="message" 
                             cols="30" rows="10" 
-                            placeholder="Message">
+                            placeholder="Message *"
+                            className={validated ? checkVal ? 'was-valid' : 'default' : null && validated ? 'default' : 'was-invalid'} >
                             </textarea>
+                            <span className={validated ? 'd-none' : 'invalid'}>This field is required</span>
                         </label>
                         {showAlert ? 
                         !error ? 
-                        <Alert variant='success'>Mensaje enviado con exito</Alert> : 
-                        <Alert variant='danger'>Hubo un error</Alert> 
+                        <Alert variant='success'>Message sent successfully</Alert> : 
+                        <Alert variant='danger'>Complete all fields</Alert> 
                         : null}
                         <button type="submit">Send</button>
                     </form>

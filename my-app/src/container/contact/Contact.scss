@@ -32,6 +32,7 @@
             text-align: center;
             margin-bottom: 2rem;
             border-radius: .75rem;
+            padding: 5px;
         }
         > .alert-success{
             border-color: #d1e7dd;
@@ -45,7 +46,7 @@
                 border-top: 10px solid #d1e7dd;
                 border-bottom: 10px solid transparent;
                 left: 40px;
-                top: 40px;
+                top: 100%;
             }
         }
         > .alert-danger{
@@ -60,7 +61,7 @@
                 border-top: 10px solid #f8d7da;
                 border-bottom: 10px solid transparent;
                 left: 40px;
-                top: 40px;
+                top: 100%;
             }
         }
     }
@@ -86,6 +87,25 @@
         border-bottom: 1px solid #BEBEBE;
         margin-bottom: 3.1rem;
         background: none;
+    }
+    .was-valid{
+        border-bottom: 1px solid green;
+    }
+    .default{
+        border-bottom: 1px solid #BEBEBE;
+    }
+    .was-invalid{
+        border-bottom: 1px solid red;
+    }
+    label{
+        position: relative;
+    }
+    .invalid{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: max-content;
+        color: red;
     }
     textarea{
         height: 7.3rem;
