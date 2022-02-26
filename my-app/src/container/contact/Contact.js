@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ContactImg from '../../assets/img/contact-image.png';
+import ContactImg from '../../assets/img/contact-image@2x.png';
 import { sendForm } from '../../axios';
 import Alert from 'react-bootstrap/Alert';
 
@@ -103,7 +103,7 @@ const Contact = () =>{
                     </form>
                 </div>
             </div>
-            <img src={ContactImg} alt="contacto" />
+            <img src={ContactImg} alt="contacto" loading="lazy"/>
         </section>
     )
 }

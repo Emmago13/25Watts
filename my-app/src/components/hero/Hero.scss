@@ -4,6 +4,7 @@
             @extend .section;
             background-repeat: no-repeat;
             width: 100%;
+            object-fit: cover;
         }
         .carousel-indicators {
             position: absolute;

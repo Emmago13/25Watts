@@ -11,6 +11,7 @@ const Hero = () =>{
                   <img
                     src={BackImg}
                     alt="First slide"
+                    loading='lazy'
                   />
                   <Carousel.Caption>
                     <h1>Sed ut perspiciatis<br/>unde omnis iste natus</h1>
@@ -22,6 +23,7 @@ const Hero = () =>{
                   <img
                     src={BackImg}
                     alt="Second slide"
+                    loading='lazy'
                   />
                   <Carousel.Caption>
                     <h1>Sed ut perspiciatis<br/>unde omnis iste natus</h1>
@@ -33,6 +35,7 @@ const Hero = () =>{
                   <img
                     src={BackImg}
                     alt="Third slide"
+                    loading='lazy'
                   />
                   <Carousel.Caption>
                     <h1>Sed ut perspiciatis<br/>unde omnis iste natus</h1>
