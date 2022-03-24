@@ -9,7 +9,7 @@ const Header = () => {
     const [menuIcon, setmenuIcon] = useState(false);
     
     const handlerMenuIcon = () => {
-        if (!menuIcon) {
+        if (!menuIcon && window.innerWidth <= 768){
             setmenuIcon(true);
         }else{
             setmenuIcon(false);
@@ -23,7 +23,7 @@ const Header = () => {
             setnavBar(false);
         }
     }
-    window.addEventListener('resize',scrollNav);
+    window.addEventListener('resize',handlerMenuIcon);
     window.addEventListener('scroll',scrollNav);
 
     const handlerScrollUp = () => {
@@ -45,7 +45,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={100}
                             onClick={handlerMenuIcon}>
                             Home
                             </Link>
@@ -56,7 +56,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={100}
                             onClick={handlerMenuIcon}>
                             About
                             </Link>
@@ -67,7 +67,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={100}
                             onClick={handlerMenuIcon}>
                             Products
                             </Link>
@@ -78,7 +78,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={100}
                             onClick={handlerMenuIcon}>
                             Services
                             </Link>
@@ -89,7 +89,7 @@ const Header = () => {
                             spy={true}
                             smooth={true}
                             offset={0}
-                            duration={300}
+                            duration={100}
                             onClick={handlerMenuIcon}>
                             Contact
                             </Link>

@@ -14,7 +14,7 @@ const Footer = () =>{
             spy={true}
             smooth={true}
             offset={0}
-            duration={500}>
+            duration={100}>
             <img src={Logo} alt="Logo25Watts" />
         </Link>
     </footer>
