@@ -26,7 +26,6 @@ const Contact = () =>{
     const handleSubmit = async (e) =>{
         e.preventDefault();
         const form = e.currentTarget;
-        console.log("form.checkValidity()",form.checkValidity());
         
         if (form.checkValidity() === false) {
             setError(true);
@@ -39,8 +38,8 @@ const Contact = () =>{
                 setCheckVal(true)
                 setShowAlert(true);
                 setError(false);
-                setTimeout(()=>{setShowAlert(false)},3000);
-                setTimeout(()=>{setCheckVal(false)},3000)
+                setTimeout(() => {setShowAlert(false)},2000);
+                setTimeout(() => {setCheckVal(false)},2000)
                 form.reset();
             }
         }

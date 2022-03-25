@@ -45,7 +45,7 @@
                     > a{
                         font-size: 3rem;
                         &:hover{
-                            color: $color-quinary;
+                            color: $color-quinary !important;
                         }
                     }
                 }
