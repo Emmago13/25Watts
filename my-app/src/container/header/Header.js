@@ -17,7 +17,7 @@ const Header = () => {
     }
 
     const handlerMenuIcon = () => {
-        if (!menuIcon){
+        if (!menuIcon && window.innerWidth < 768) {
             setmenuIcon(true);
         }else{
             setmenuIcon(false);
