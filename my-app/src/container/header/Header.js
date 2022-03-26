@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import TopLogo from "../../assets/img/top-logo.svg";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 
 const Header = () => {
@@ -8,34 +8,29 @@ const Header = () => {
     const [navBar,setnavBar] = useState(false);
     const [menuIcon, setmenuIcon] = useState(false);
     
-    const handlerMenuIcon = () => {
-        if (!menuIcon && window.innerWidth <= 768){
-            setmenuIcon(true);
-        }else{
-            setmenuIcon(false);
-        }
-    }
-
-    const scrollNav = () =>{
+    const scrollNav = () => {
         if (window.scrollY >= 100) {
             setnavBar(true);
         }else{
             setnavBar(false);
         }
     }
-    window.addEventListener('resize',handlerMenuIcon);
-    window.addEventListener('scroll',scrollNav);
 
-    const handlerScrollUp = () => {
-        scroll.scrollToTop();
-    };
-
+    const handlerMenuIcon = () => {
+        if (!menuIcon && window.innerWidth < 768) {
+            setmenuIcon(true);
+        }else{
+            setmenuIcon(false);
+        }
+    }
+    
+    window.addEventListener('scroll', scrollNav)
 
     return(
-        <header id="header" className={menuIcon ? 'header onScroll active' : 'header' && navBar ? 'header onScroll' : 'header'}>
+        <header id="header" className={menuIcon ? 'header active' : 'header' && navBar ? 'header onScroll' : 'header'} >
             <div>
                 <a href="#home">
-                    <img src={TopLogo} alt="Logo25Watts" onClick={handlerScrollUp} />
+                    <img src={TopLogo} alt="Logo25Watts" />
                 </a>
                 <nav>
                     <ul>
