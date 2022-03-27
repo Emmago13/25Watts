@@ -87,6 +87,8 @@
         border-bottom: 1px solid #BEBEBE;
         margin-bottom: 3.1rem;
         background: none;
+        border-radius: 0;
+        -webkit-appearance: none
     }
     .was-valid{
         border-bottom: 1px solid green;
