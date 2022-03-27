@@ -1,30 +1,45 @@
-import React,{useState} from "react";
+import React,{ useState, useEffect} from "react";
 import TopLogo from "../../assets/img/top-logo.svg";
 import { Link } from "react-scroll";
 
 
 const Header = () => {
 
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [navBar,setnavBar] = useState(false);
     const [menuIcon, setmenuIcon] = useState(false);
     
     const scrollNav = () => {
-        if (window.scrollY >= 100) {
+        let currentValue = window.scrollY;
+        if (currentValue >= 100) {
             setnavBar(true);
         }else{
             setnavBar(false);
         }
+        if (currentValue >= 100 && prevScrollPos > currentValue) {
+            setnavBar(true);
+        }else if (prevScrollPos < currentValue) {
+            setnavBar(false);
+        }
+        setPrevScrollPos(currentValue);
     }
 
     const handlerMenuIcon = () => {
-        if (!menuIcon && window.innerWidth < 768) {
+        if (!menuIcon && window.innerWidth < 769) {
             setmenuIcon(true);
         }else{
             setmenuIcon(false);
         }
     }
     
-    window.addEventListener('scroll', scrollNav)
+    useEffect(() => {
+        window.addEventListener("scroll", scrollNav)
+        return () => {
+          window.removeEventListener("scroll", scrollNav)
+        }
+    })
+
+
 
     return(
         <header id="header" className={menuIcon ? 'header active' : 'header' && navBar ? 'header onScroll' : 'header'} >

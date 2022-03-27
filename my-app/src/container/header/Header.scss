@@ -11,21 +11,12 @@
         position: fixed;
         top: 0;
         background-color: $color-secondary;
-        height: 7rem;
         ul{
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
         a:hover{
             color: $color-quinary !important;
-        }
-        @include breakpoint("tablet"){
-            > div{
-                margin-top: 2.5rem;
-                > div > span:nth-child(1){
-                    margin-top: 1rem;
-                }
-            }
         }
     }
     &.active{
@@ -38,8 +29,17 @@
                 flex-direction: column;
                 position: fixed;
                 top: 20%;
-                left: 30%;
+                left: 37%;
                 animation: 0.5s showUp ease;
+                @include breakpoint("mobile"){
+                    left: 30%;
+                }
+                @media only screen and (max-width: 400px) {
+                    left: 25%;
+                }
+                @media only screen and (max-width: 320px) {
+                    left: 20%;
+                }
                 > li{
                     margin-bottom: 1rem;
                     > a{
@@ -137,9 +137,11 @@
 
 @keyframes showUp{
     from{
+        opacity: 0;
         transform: translateY(-100%);
     }
     to{
+        opacity: 1;
         transform: translateY(0);
     }
 }
