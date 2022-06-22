@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ContactImg from '../../assets/img/contact-image@2x.png';
+import ContactImg from '../../assets/img/contact-image@2x.webp';
 import { sendForm } from '../../axios';
 import Alert from 'react-bootstrap/Alert';
 

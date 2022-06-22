@@ -1,6 +1,6 @@
 import React from 'react';
 import {Carousel, Button} from 'react-bootstrap'
-import BackImg from '../../assets/img/slider-1@2x.png'
+import BackImg from '../../assets/img/slider-1@2x.webp'
 
 
 const Hero = () =>{
